@@ -59,11 +59,8 @@ const GameStartScreen = ({ onStart }: { onStart: () => void }) => {
             <h1 className="text-6xl md:text-8xl font-bold text-transparent bg-gradient-to-r from-pink-400 via-purple-400 to-pink-300 bg-clip-text mb-4 font-mono tracking-wider animate-pulse">
               DHVANI
             </h1>
-            <h2 className="text-2xl md:text-3xl text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text font-mono mb-2">
-              PORTFOLIO GAME ✨
-            </h2>
             <div className="text-pink-300 font-mono text-sm">
-              LEVEL: COMPUTER SCIENCE PRINCESS 👑
+              LEVEL: COMPUTER SCIENCE STUDENT 👑
             </div>
           </div>
 
@@ -83,7 +80,7 @@ const GameStartScreen = ({ onStart }: { onStart: () => void }) => {
                     : 'text-gray-400 hover:text-pink-300'
                 }`}
               >
-                YES! 💕
+                YES!
                 {selectedOption === 'yes' && blinkCursor && (
                   <span className="inline ml-2 text-pink-400">→</span>
                 )}
@@ -97,7 +94,7 @@ const GameStartScreen = ({ onStart }: { onStart: () => void }) => {
                     : 'text-gray-400 hover:text-pink-300'
                 }`}
               >
-                NOT YET 💔
+                NOT YET!
                 {selectedOption === 'no' && blinkCursor && (
                   <span className="inline ml-2 text-pink-400">→</span>
                 )}
@@ -116,7 +113,7 @@ const GameStartScreen = ({ onStart }: { onStart: () => void }) => {
                   : 'border-gray-600 text-gray-600 cursor-not-allowed'
               }`}
             >
-              ✨ PRESS START ✨
+              ✨ START ✨
             </button>
           </div>
 

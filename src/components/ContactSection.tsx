@@ -1,3 +1,4 @@
+// This section is hidden for now
 
 import React, { useState } from 'react';
 import { Mail, User, Download } from 'lucide-react';

@@ -8,12 +8,12 @@ const HeroSection = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   
   const careers = [
-    'Computer Science Princess 👑',
-    'Software Developer 💻',
-    'Full-Stack Engineer 🚀',
-    'Frontend Specialist ⚛️',
-    'Tech Enthusiast 💖',
-    'Problem Solver 🧩'
+    'Computer Science Student',
+    'Software Developer',
+    'Full-Stack Engineer',
+    'Frontend Specialist',
+    'Tech Enthusiast',
+    'Problem Solver'
   ];
   
   useEffect(() => {
@@ -54,16 +54,16 @@ const HeroSection = () => {
         {/* Game HUD */}
         <div className="flex justify-between items-center mb-8 text-pink-400 font-mono text-sm">
           <div>
-            <div>💖 PLAYER</div>
+            <div>💖PLAYER</div>
             <div className="text-xl font-bold text-transparent bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text">DHVANI THAKKAR</div>
           </div>
           <div>
-            <div>🎓 EDUCATION</div>
-            <div className="text-xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">COMPUTER SCIENCE</div>
+            <div>🎓EDUCATION</div>
+            <div className="text-xl font-bold text-blue-400">COMPUTER SCIENCE & STATISTICS</div>
           </div>
           <div>
-            <div>💫 STATUS</div>
-            <div className="text-xl font-bold text-green-400">READY TO SHINE</div>
+            <div>💫STATUS</div>
+            <div className="text-xl font-bold text-green-400">ACTIVE</div>
           </div>
         </div>
 
@@ -97,7 +97,7 @@ const HeroSection = () => {
             <p className="text-base text-gray-300 leading-relaxed font-mono">
               💖 Passionate computer science student specializing in{' '}
               <span className="text-pink-400 font-bold">full-stack development</span>{' '}
-              and <span className="text-purple-400 font-bold">machine learning</span>.
+              and <span className="text-purple-400 font-bold">data engineering</span>.
               <br />
               <br />
               ✨ Currently seeking opportunities to apply my skills in{' '}

@@ -8,45 +8,62 @@ const ExperienceSection = () => {
   const experiences = {
     professional: [
       {
-        title: 'Software Engineering Intern',
-        company: 'Tech Company Inc.',
-        period: 'Summer 2024',
-        description: 'Developed full-stack web applications using React and Node.js. Collaborated with senior developers on enterprise-level projects.',
-        technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS'],
+        title: 'Junior Systems Analyst',
+        company: 'Governement of Manitoba',
+        period: 'May 2024 - Present',
+        description: 'Built digital tools replacing paper-based reports, cutting reporting time by 60%. Analyzed 1,000+ business records for pandemic response tool',
+        technologies: ['React', 'Node.js', 'TypeScript', 'AzureDevOps', 'AWS'],
         color: 'from-blue-400 to-cyan-500',
-        companyWebsite: 'https://techcompany.com',
-        gitRepo: 'https://github.com/username/project-repo'
+        companyWebsite: 'https://gov.mb.ca/emo/index.html',
+        //gitRepo: 'https://github.com/username/project-repo'
       },
       {
-        title: 'Frontend Developer',
-        company: 'Startup Solutions',
-        period: 'Part-time 2023-2024',
-        description: 'Built responsive user interfaces and implemented modern design systems. Increased user engagement by 40%.',
-        technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Firebase'],
-        color: 'from-purple-400 to-pink-500',
-        companyWebsite: 'https://startupsolutions.com',
-        gitRepo: 'https://github.com/username/frontend-project'
+        title: 'Applications Assistant',
+        company: 'Antec Controls - Price Industries',
+        period: 'May 2023 - September 2023',
+        description: 'Executed 30+ product tests, detecting critical issues early. Reduced prototype development time by 30%',
+        technologies: ['C++','Microsoft 365'],
+        color: 'from-blue-400 to-cyan-500',
+        companyWebsite: 'https://anteccontrols.com/',
+        //gitRepo: 'https://github.com/username/frontend-project'
       }
     ],
     other: [
       {
-        title: 'Freelance Web Developer',
-        company: 'Self-Employed',
-        period: '2022-Present',
-        description: 'Created custom websites for small businesses and startups. Managed complete project lifecycle from design to deployment.',
+        title: 'Digital Tutor',
+        company: 'University of Manitoba',
+        period: 'November 2023 - April 2025',
+        description: '•	Assist instructors and students to design and develop multimodal projects to enhance learning experiences. Guide students to create digital content and manage files effectively for diverse academic projects.	Mentor students on digital humanities initiatives, including computational data collection.',
         technologies: ['HTML', 'CSS', 'JavaScript', 'WordPress'],
         color: 'from-green-400 to-teal-500',
-        gitRepo: 'https://github.com/username/freelance-projects'
+        companyWebsite: 'https://umanitoba.ca/arts/english-theatre-film-media'
       },
       {
-        title: 'Computer Lab Assistant',
-        company: 'University IT Department',
-        period: '2023-2024',
-        description: 'Provided technical support to students and faculty. Maintained computer systems and troubleshot software issues.',
+        title: 'Computer Science Grader',
+        company: 'University of Manitoba',
+        period: 'May 2024 - July 2024',
+        description: '•	Evaluated and provided feedback on assignments and exams for computer science courses. Assisted in creating grading rubrics for consistent evaluation.Addressed student inquiries and provided additional support.',
         technologies: ['Windows', 'Linux', 'Network Administration'],
-        color: 'from-yellow-400 to-orange-500',
-        companyWebsite: 'https://university.edu/it'
-      }
+        color: 'from-green-400 to-teal-500',
+        companyWebsite: 'https://umanitoba.ca/science/computer-science'
+      },
+      {
+        title: 'Student Notetaker',
+        company: 'University of Manitoba',
+        period: 'February 2021 - September 2022',
+        description: '•	Captured critical lecture information and key points in real-time to provide accessible notes for students requiring academic accommodations. Organized and formatted detailed notes to support clear comprehension and ease of study, tailored to individual student needs.Maintained confidentiality and collaborated with accessibility services to uphold a supportive and inclusive academic environment.',
+        technologies: ['Windows', 'Linux', 'Network Administration'],
+        color: 'from-green-400 to-teal-500',
+        companyWebsite: 'https://umanitoba.ca/student-supports/accessibility'
+      },
+      // {
+      //   title: 'Child Care Assistant',
+      //   company: 'Maples Day Care',
+      //   period: 'February 2021 - September 2022',
+      //   description: 'Provided technical support to students and faculty. Maintained computer systems and troubleshot software issues.',
+      //   technologies: ['Supervision'],
+      //   color: 'from-green-400 to-teal-500',
+      // }
     ]
   };
 

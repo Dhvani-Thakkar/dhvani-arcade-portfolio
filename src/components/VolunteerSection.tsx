@@ -5,23 +5,59 @@ import { Users, ExternalLink, Github } from 'lucide-react';
 const VolunteerSection = () => {
   const volunteerExperiences = [
     {
-      title: 'Coding Mentor',
-      company: 'Code for Community',
-      period: '2023-Present',
-      description: 'Taught programming fundamentals to underserved youth. Organized coding workshops and hackathons.',
-      technologies: ['Python', 'Scratch', 'Web Development'],
+      title: 'Vice President',
+      company: 'University of Manitoba Women in Computer Science',
+      period: 'May 2023-April 2025',
+      description: 'Lead mentorship programs and host events to connect 65+ women and nonbinary individuals with mentors in tech. Fostered meaningful professional development through speaker series and community engagement.',
+      //technologies: ['Python', 'Scratch', 'Web Development'],
       color: 'from-pink-400 to-red-500',
-      companyWebsite: 'https://codeforcommunity.org',
-      gitRepo: 'https://github.com/username/teaching-materials'
+      companyWebsite: 'https://umwics.ca/',
+      //gitRepo: 'https://github.com/username/teaching-materials'
     },
     {
-      title: 'Tech Workshop Facilitator',
-      company: 'Local Library',
-      period: '2022-2023',
-      description: 'Led weekly computer literacy sessions for seniors. Helped bridge the digital divide in the community.',
-      technologies: ['Basic Computing', 'Internet Safety', 'Email'],
+      title: 'Director of Communications',
+      company: 'Computing Councils of Canada',
+      period: 'March 2023-April 2024',
+      description: 'Designed promotional materials using Adobe Photoshop and Canva. Increased attendance to over 150 participants per major event through targeted campaigns.',
+      //technologies: ['Basic Computing', 'Internet Safety', 'Email'],
       color: 'from-indigo-400 to-purple-500',
-      companyWebsite: 'https://locallibrary.org'
+      companyWebsite: 'https://www.ccubed.dev/'
+    },
+    {
+      title: 'Social Media Coordinator',
+      company: 'University of Manitoba Women in Computer Science',
+      period: 'May 2022- April 2023',
+      description: 'Enhanced online presence with social media strategy and scheduling tools like Buffer. Boosted follower count by 85% through consistent content and graphics.',
+      //technologies: ['Basic Computing', 'Internet Safety', 'Email'],
+      color: 'from-indigo-400 to-purple-500',
+      companyWebsite: 'https://umwics.ca/'
+    },
+    {
+      title: 'External Ambassador',
+      company: 'University of Alberta- Network of Empowered Women',
+      period: 'July 2022-December 2023',
+      description: 'Promoted and represented the conference to the University of Manitoba students. Assisted the public relations team in recruiting delegate applicants to attend the conference.',
+      //technologies: ['Basic Computing', 'Internet Safety', 'Email'],
+      color: 'from-indigo-400 to-purple-500',
+      companyWebsite: 'https://www.networkofempoweredwomen.ca/'
+    },
+    {
+      title: 'Winter Orientation Leader',
+      company: 'University of Manitoba - International Centre',
+      period: 'January 2022',
+      description: 'Guided the new students about the lifestyle in Winnipeg and cultural differences. Acknowledged them about the resources available on the campus based on their needs.',
+      //technologies: ['Basic Computing', 'Internet Safety', 'Email'],
+      color: 'from-indigo-400 to-purple-500',
+      companyWebsite: 'https://umanitoba.ca/international'
+    },
+    {
+      title: 'Notetaker',
+      company: 'University of Manitoba - Student Accessibility Services',
+      period: 'September 2020-January 2021',
+      description: 'Scanned notes taken in class and share them to SAS students. Committed to sharing notes to students in need based on their accessibility needs.',
+      //technologies: ['Basic Computing', 'Internet Safety', 'Email'],
+      color: 'from-indigo-400 to-purple-500',
+      companyWebsite: 'https://umanitoba.ca/student-supports/accessibility'
     }
   ];
 
@@ -30,7 +66,7 @@ const VolunteerSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text mb-4">
-            💖 VOLUNTEER WORK 💖
+            💕 VOLUNTEER WORK 💕
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Giving back to the community through technology ✨
@@ -88,7 +124,7 @@ const VolunteerSection = () => {
                 {exp.description}
               </p>
 
-              <div className="flex flex-wrap gap-3">
+              {/* <div className="flex flex-wrap gap-3">
                 {exp.technologies.map((tech, techIndex) => (
                   <span
                     key={techIndex}
@@ -97,7 +133,7 @@ const VolunteerSection = () => {
                     {tech}
                   </span>
                 ))}
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
