@@ -18,35 +18,35 @@ All colors MUST be HSL.
     --popover: 0 0% 5%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 180 100% 50%;
+    --primary: 320 100% 70%;
     --primary-foreground: 0 0% 0%;
 
-    --secondary: 300 100% 50%;
+    --secondary: 280 100% 70%;
     --secondary-foreground: 0 0% 0%;
 
     --muted: 0 0% 10%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 180 100% 50%;
+    --accent: 320 100% 70%;
     --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 180 50% 20%;
-    --input: 180 50% 15%;
-    --ring: 180 100% 50%;
+    --border: 320 50% 30%;
+    --input: 320 50% 15%;
+    --ring: 320 100% 70%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 5%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary: 320 100% 70%;
     --sidebar-primary-foreground: 0 0% 0%;
     --sidebar-accent: 0 0% 10%;
     --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 180 50% 15%;
-    --sidebar-ring: 180 100% 50%;
+    --sidebar-border: 320 50% 15%;
+    --sidebar-ring: 320 100% 70%;
   }
 }
 
@@ -57,24 +57,24 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-family: 'Poppins', 'JetBrains Mono', 'Courier New', monospace;
   }
 }
 
-/* Custom arcade-style animations and effects */
+/* Custom girly arcade-style animations and effects */
 @layer utilities {
   .glow {
-    text-shadow: 0 0 10px currentColor;
+    text-shadow: 0 0 15px currentColor;
   }
   
   .arcade-border {
-    border-image: linear-gradient(45deg, #ffd700, #ff6b35) 1;
+    border-image: linear-gradient(45deg, #ff69b4, #ff1493, #da70d6) 1;
   }
 
   .pixel-border {
     image-rendering: pixelated;
     border-style: solid;
-    border-image: url("data:image/svg+xml,%3csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m0,0 l0,8 l8,0 l0,-8 z' fill='%23ffd700'/%3e%3c/svg%3e") 8;
+    border-image: url("data:image/svg+xml,%3csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m0,0 l0,8 l8,0 l0,-8 z' fill='%23ff69b4'/%3e%3c/svg%3e") 8;
   }
 }
 
@@ -85,20 +85,25 @@ All colors MUST be HSL.
 
 @keyframes neon-pulse {
   0%, 100% { 
-    box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+    box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
   }
   50% { 
-    box-shadow: 0 0 2px currentColor, 0 0 5px currentColor, 0 0 8px currentColor;
+    box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4;
   }
 }
 
 @keyframes arcade-glow {
   0%, 100% {
-    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 20px currentColor;
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 40px #ff69b4;
   }
   50% {
-    text-shadow: 0 0 2px currentColor, 0 0 5px currentColor, 0 0 10px currentColor;
+    text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 20px #ff69b4;
   }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1) rotate(180deg); }
 }
 
 /* Scrollbar styling */
@@ -111,23 +116,23 @@ All colors MUST be HSL.
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #ffd700, #ff6b35);
+  background: linear-gradient(180deg, #ff69b4, #da70d6);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #ff6b35, #ffd700);
+  background: linear-gradient(180deg, #da70d6, #ff69b4);
 }
 
 /* Selection styling */
 ::selection {
-  background: rgba(255, 215, 0, 0.3);
+  background: rgba(255, 105, 180, 0.3);
   color: white;
 }
 
 /* Input focus effects */
 input:focus, textarea:focus {
-  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+  box-shadow: 0 0 0 2px rgba(255, 105, 180, 0.3);
 }
 
 /* CRT screen effect */
@@ -146,9 +151,22 @@ input:focus, textarea:focus {
     0deg,
     transparent,
     transparent 2px,
-    rgba(255, 255, 255, 0.03) 2px,
-    rgba(255, 255, 255, 0.03) 4px
+    rgba(255, 105, 180, 0.03) 2px,
+    rgba(255, 105, 180, 0.03) 4px
   );
   pointer-events: none;
   z-index: 1;
+}
+
+/* Sparkle effects */
+.sparkle {
+  animation: sparkle 2s infinite;
+}
+
+.sparkle:nth-child(2n) {
+  animation-delay: 0.5s;
+}
+
+.sparkle:nth-child(3n) {
+  animation-delay: 1s;
 }
