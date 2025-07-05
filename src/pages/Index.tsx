@@ -5,7 +5,8 @@ import GameStartScreen from '../components/GameStartScreen';
 import HeroSection from '../components/HeroSection';
 import SkillsSection from '../components/SkillsSection';
 import ExperienceSection from '../components/ExperienceSection';
-import ContactSection from '../components/ContactSection';
+import ProjectsSection from '../components/ProjectsSection';
+import VolunteerSection from '../components/VolunteerSection';
 import ArcadeBackground from '../components/ArcadeBackground';
 
 const Index = () => {
@@ -27,7 +28,8 @@ const Index = () => {
             <HeroSection />
             <SkillsSection />
             <ExperienceSection />
-            <ContactSection />
+            <ProjectsSection />
+            <VolunteerSection />
           </>
         )}
       </div>

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Download, Heart } from 'lucide-react';
+import { Download, Heart, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -26,9 +26,9 @@ const Header = () => {
         <nav className="hidden md:flex space-x-6">
           {[
             { name: 'Skills', id: 'skills', emoji: '⭐' },
-            { name: 'Experience', id: 'professional', emoji: '💼' },
+            { name: 'Experience', id: 'experience', emoji: '💼' },
             { name: 'Projects', id: 'projects', emoji: '🎨' },
-            { name: 'Contact', id: 'contact', emoji: '💌' }
+            { name: 'Volunteer', id: 'volunteer', emoji: '💖' }
           ].map((item) => (
             <button
               key={item.name}
@@ -41,13 +41,44 @@ const Header = () => {
           ))}
         </nav>
 
-        <Button
-          onClick={handleResumeDownload}
-          className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-mono text-sm tracking-wider border-2 border-pink-400 hover:border-purple-300 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/25 rounded-2xl"
-        >
-          <Download className="w-4 h-4 mr-2" />
-          DOWNLOAD.RESUME 💕
-        </Button>
+        <div className="flex items-center space-x-4">
+          {/* Contact Icons */}
+          <div className="flex items-center space-x-2">
+            <a
+              href="https://github.com/dhvani-thakkar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-pink-400/20 hover:bg-pink-400/30 rounded-full transition-colors duration-300"
+              title="GitHub"
+            >
+              <Github className="w-4 h-4 text-pink-400" />
+            </a>
+            <a
+              href="https://linkedin.com/in/dhvani-thakkar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-purple-400/20 hover:bg-purple-400/30 rounded-full transition-colors duration-300"
+              title="LinkedIn"
+            >
+              <Linkedin className="w-4 h-4 text-purple-400" />
+            </a>
+            <a
+              href="mailto:dhvani.thakkar@example.com"
+              className="p-2 bg-pink-400/20 hover:bg-pink-400/30 rounded-full transition-colors duration-300"
+              title="Email"
+            >
+              <Mail className="w-4 h-4 text-pink-400" />
+            </a>
+          </div>
+
+          <Button
+            onClick={handleResumeDownload}
+            className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-mono text-sm tracking-wider border-2 border-pink-400 hover:border-purple-300 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/25 rounded-2xl"
+          >
+            <Download className="w-4 h-4 mr-2" />
+            DOWNLOAD.RESUME 💕
+          </Button>
+        </div>
       </div>
     </header>
   );

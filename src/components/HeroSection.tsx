@@ -1,29 +1,48 @@
 
 import React, { useState, useEffect } from 'react';
-import { Code, MapPin, Calendar, GraduationCap, Heart, Sparkles } from 'lucide-react';
+import { GraduationCap, Heart, Sparkles } from 'lucide-react';
 
 const HeroSection = () => {
   const [displayText, setDisplayText] = useState('');
-  const fullText = 'Computer Science Princess 👑';
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  
+  const careers = [
+    'Computer Science Princess 👑',
+    'Software Developer 💻',
+    'Full-Stack Engineer 🚀',
+    'Frontend Specialist ⚛️',
+    'Tech Enthusiast 💖',
+    'Problem Solver 🧩'
+  ];
   
   useEffect(() => {
-    let index = 0;
-    const timer = setInterval(() => {
-      if (index <= fullText.length) {
-        setDisplayText(fullText.slice(0, index));
-        index++;
+    const currentCareer = careers[currentIndex];
+    const typingSpeed = isDeleting ? 50 : 100;
+    const pauseTime = isDeleting ? 1000 : 2000;
+    
+    const timer = setTimeout(() => {
+      if (!isDeleting && displayText === currentCareer) {
+        setTimeout(() => setIsDeleting(true), pauseTime);
+      } else if (isDeleting && displayText === '') {
+        setIsDeleting(false);
+        setCurrentIndex((prev) => (prev + 1) % careers.length);
       } else {
-        clearInterval(timer);
+        setDisplayText(prev => 
+          isDeleting 
+            ? prev.slice(0, -1)
+            : currentCareer.slice(0, prev.length + 1)
+        );
       }
-    }, 100);
+    }, typingSpeed);
 
-    return () => clearInterval(timer);
-  }, []);
+    return () => clearTimeout(timer);
+  }, [displayText, currentIndex, isDeleting, careers]);
 
   return (
     <section className="min-h-screen flex items-center justify-center pt-20 px-6">
       {/* Game screen container */}
-      <div className="bg-black/40 border-4 border-pink-400/50 rounded-3xl p-8 max-w-5xl w-full backdrop-blur-sm relative overflow-hidden">
+      <div className="bg-black/40 border-4 border-pink-400/50 rounded-3xl p-8 max-w-4xl w-full backdrop-blur-sm relative overflow-hidden">
         {/* Floating sparkles */}
         <div className="absolute top-4 right-4">
           <Sparkles className="w-8 h-8 text-pink-300 animate-pulse" />
@@ -39,8 +58,8 @@ const HeroSection = () => {
             <div className="text-xl font-bold text-transparent bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text">DHVANI THAKKAR</div>
           </div>
           <div>
-            <div>✨ LEVEL</div>
-            <div className="text-xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">CS STUDENT</div>
+            <div>🎓 EDUCATION</div>
+            <div className="text-xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">COMPUTER SCIENCE</div>
           </div>
           <div>
             <div>💫 STATUS</div>
@@ -68,31 +87,9 @@ const HeroSection = () => {
           </h1>
 
           {/* Typed effect subtitle */}
-          <div className="text-xl md:text-2xl text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text font-mono mb-8 h-12 flex items-center justify-center">
-            <Code className="w-6 h-6 mr-3 text-pink-400" />
+          <div className="text-xl md:text-2xl text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text font-mono mb-8 h-16 flex items-center justify-center">
             <span>{displayText}</span>
             <span className="animate-ping ml-1 text-pink-400">|</span>
-          </div>
-
-          {/* Player stats with girly colors */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-8">
-            <div className="bg-black/60 border-2 border-pink-400/50 rounded-2xl p-4 hover:border-pink-400 transition-colors duration-300 hover:shadow-lg hover:shadow-pink-400/20">
-              <MapPin className="w-6 h-6 text-pink-400 mx-auto mb-2" />
-              <div className="text-xs text-pink-400 font-mono tracking-wider mb-1">💕 LOCATION</div>
-              <div className="text-sm font-bold text-white">San Francisco Bay Area</div>
-            </div>
-            
-            <div className="bg-black/60 border-2 border-purple-400/50 rounded-2xl p-4 hover:border-purple-400 transition-colors duration-300 hover:shadow-lg hover:shadow-purple-400/20">
-              <GraduationCap className="w-6 h-6 text-purple-400 mx-auto mb-2" />
-              <div className="text-xs text-purple-400 font-mono tracking-wider mb-1">🎓 EDUCATION</div>
-              <div className="text-sm font-bold text-white">Computer Science</div>
-            </div>
-            
-            <div className="bg-black/60 border-2 border-pink-400/50 rounded-2xl p-4 hover:border-pink-400 transition-colors duration-300 hover:shadow-lg hover:shadow-pink-400/20">
-              <Calendar className="w-6 h-6 text-pink-400 mx-auto mb-2" />
-              <div className="text-xs text-pink-400 font-mono tracking-wider mb-1">✨ STATUS</div>
-              <div className="text-sm font-bold text-white">Open to Work</div>
-            </div>
           </div>
 
           {/* Game-style description with girly touch */}
