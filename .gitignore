@@ -8,8 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-docs/  # Ignore during development
-!docs/**  # Allow built files to be tracked
+
 *.local
 
 # Editor directories and files
