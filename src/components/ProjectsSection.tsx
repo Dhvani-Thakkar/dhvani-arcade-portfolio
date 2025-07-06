@@ -5,27 +5,32 @@ import { Code, ExternalLink, Github } from 'lucide-react';
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with React frontend and Node.js backend. Features include user authentication, payment integration, and admin dashboard.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe API'],
+      title: 'EduNova Web Interface',
+      description: 'Implemented a web-based educational chatbot with a team of 3 for the Government of Canada.Enabled self-paced learning and reduced instructor dependency through automated, conversational explanations.',
+      technologies: ['ReactJs', 'Node.js', 'DynamoDB', 'AWS S3', 'Ollama'],
       color: 'from-pink-400 to-purple-500',
-      gitRepo: 'https://github.com/username/ecommerce-platform',
-      liveDemo: 'https://ecommerce-demo.com'
+      gitRepo: 'https://github.com/Dhvani-Thakkar/industrialProject',
+      liveDemo: 'https://www.youtube.com/watch?v=gzSpohOCflw'
     },
     {
-      title: 'Weather App',
-      description: 'Real-time weather application with location-based forecasts, interactive maps, and beautiful UI animations.',
-      technologies: ['React', 'Weather API', 'CSS Animations'],
-      color: 'from-blue-400 to-cyan-500',
-      gitRepo: 'https://github.com/username/weather-app',
-      liveDemo: 'https://weather-app-demo.com'
-    },
-    {
-      title: 'Task Management System',
-      description: 'Collaborative task management tool with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      technologies: ['Next.js', 'Socket.io', 'PostgreSQL'],
+      title: 'ReShop Android App',
+      description: '"Created an e-commerce platform with a team of 5 members. Integrated user authentication and dynamic item listings using Agile development methodology.',
+      technologies: ['Java', 'SQL', 'HTML', 'CSS', 'Agile Methodologies'],
       color: 'from-green-400 to-teal-500',
-      gitRepo: 'https://github.com/username/task-manager'
+      gitRepo: 'https://github.com/Dhvani-Thakkar/ReShop'
+    },
+    {
+      title: 'FIFA 2022 Players Database',
+      description: 'Developed efficient SQL scripts for extracting large datasets from a normalized database of over 19,000 entries. Improved data usability for fast insights during analysis.',
+      technologies: ['Java', 'SQL'],
+      color: 'from-blue-400 to-cyan-500',
+      gitRepo: 'https://github.com/Dhvani-Thakkar/database-project',
+    },
+    {
+      title: 'Group Collaboration System',
+      description: '"Collaborated in a team of 5 to design and build a web-based collaboration tool with document sharing, improving remote team accessibility and project coordination by 40%. Developed and deployed a real-time chat system to streamline internal communication, reducing response time between team members by over 50%',
+      technologies: ['HTML', 'JavaScript', 'CSS'],
+      color: 'from-green-400 to-teal-500',
     }
   ];
 
