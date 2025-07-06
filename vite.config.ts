@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
   base: '/dhvani-arcade-portfolio/', // 👈 Add this line
   server: {
     host: "::",
-    port: 8080,
+    port: 3000,
   },
   plugins: [
     react(),
