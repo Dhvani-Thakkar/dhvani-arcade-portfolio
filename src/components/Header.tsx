@@ -5,8 +5,13 @@ import { Button } from '@/components/ui/button';
 
 const Header = () => {
   const handleResumeDownload = () => {
-    console.log('Resume download triggered');
-  };
+  console.log('Resume download triggered');
+  const link = document.createElement('a');
+  link.href = '/dhvani-arcade-portfolio/Dhvani_Thakkar_Resume.pdf'; // relative to public folder
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -76,7 +81,7 @@ const Header = () => {
             className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-mono text-sm tracking-wider border-2 border-pink-400 hover:border-purple-300 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/25 rounded-2xl"
           >
             <Download className="w-4 h-4 mr-2" />
-            DOWNLOAD.RESUME 
+            RESUME 
           </Button>
         </div>
       </div>
