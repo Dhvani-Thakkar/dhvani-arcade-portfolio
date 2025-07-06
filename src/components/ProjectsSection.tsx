@@ -14,7 +14,7 @@ const ProjectsSection = () => {
     },
     {
       title: 'ReShop Android App',
-      description: '"Created an e-commerce platform with a team of 5 members. Integrated user authentication and dynamic item listings using Agile development methodology.',
+      description: 'Created an e-commerce platform with a team of 5 members. Integrated user authentication and dynamic item listings using Agile development methodology.',
       technologies: ['Java', 'SQL', 'HTML', 'CSS', 'Agile Methodologies'],
       color: 'from-green-400 to-teal-500',
       gitRepo: 'https://github.com/Dhvani-Thakkar/ReShop'
@@ -28,7 +28,7 @@ const ProjectsSection = () => {
     },
     {
       title: 'Group Collaboration System',
-      description: '"Collaborated in a team of 5 to design and build a web-based collaboration tool with document sharing, improving remote team accessibility and project coordination by 40%. Developed and deployed a real-time chat system to streamline internal communication, reducing response time between team members by over 50%',
+      description: 'Collaborated in a team of 5 to design and build a web-based collaboration tool with document sharing, improving remote team accessibility and project coordination by 40%. Developed and deployed a real-time chat system to streamline internal communication, reducing response time between team members by over 50%',
       technologies: ['HTML', 'JavaScript', 'CSS'],
       color: 'from-green-400 to-teal-500',
     }

@@ -43,13 +43,6 @@ const HeroSection = () => {
     <section className="min-h-screen flex items-center justify-center pt-20 px-6">
       {/* Game screen container */}
       <div className="bg-black/40 border-4 border-pink-400/50 rounded-3xl p-8 max-w-4xl w-full backdrop-blur-sm relative overflow-hidden">
-        {/* Floating sparkles */}
-        <div className="absolute top-4 right-4">
-          <Sparkles className="w-8 h-8 text-pink-300 animate-pulse" />
-        </div>
-        <div className="absolute bottom-4 left-4">
-          <Sparkles className="w-6 h-6 text-purple-300 animate-pulse" style={{ animationDelay: '1s' }} />
-        </div>
         
         {/* Game HUD */}
         <div className="flex justify-between items-center mb-8 text-pink-400 font-mono text-sm">
@@ -72,9 +65,6 @@ const HeroSection = () => {
           <div className="mb-8 relative">
             <div className="w-40 h-40 mx-auto bg-gradient-to-br from-pink-400 via-purple-400 to-pink-500 rounded-full flex items-center justify-center border-4 border-pink-400 hover:border-purple-400 transition-colors duration-300 hover:scale-110 transform transition-transform shadow-lg shadow-pink-500/30">
               <GraduationCap className="w-20 h-20 text-black" />
-            </div>
-            <div className="absolute -top-2 -right-2 w-10 h-10 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full animate-pulse border-2 border-black flex items-center justify-center">
-              <Heart className="w-5 h-5 text-black fill-current" />
             </div>
             {/* Floating hearts */}
             <div className="absolute -top-4 -left-4 text-pink-300 text-2xl animate-bounce">💕</div>
