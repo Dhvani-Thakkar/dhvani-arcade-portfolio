@@ -105,7 +105,7 @@ const SkillsSection = () => {
                       transition={{ duration: 0.5, delay: 0.1 * index, ease: 'easeOut' }}
                       className="flex items-center rounded-md p-3 border"
                     >
-                      <span className="font-body font-medium text-sm text-neon-turquoise">
+                      <span className="font-body font-medium text-sm text-white">
                         {skill.name}
                       </span>
                     </motion.div>

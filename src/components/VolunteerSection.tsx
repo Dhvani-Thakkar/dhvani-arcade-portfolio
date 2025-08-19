@@ -13,6 +13,7 @@ const VolunteerSection = () => {
         'Lead mentorship programs and host events to connect 65+ women and nonbinary individuals with mentors in tech',
         'Fostered meaningful professional development through speaker series and community engagement'
       ],
+      technologies: ['Leadership', 'Event Planning', 'Mentorship'],
       companyWebsite: 'https://umwics.ca/',
     },
     {
@@ -23,6 +24,7 @@ const VolunteerSection = () => {
         'Designed promotional materials using Adobe Photoshop and Canva',
         'Increased attendance to over 150 participants per major event through targeted campaigns'
       ],
+      technologies: ['Adobe Photoshop', 'Canva', 'Marketing'],
       companyWebsite: 'https://www.ccubed.dev/'
     },
     {
@@ -33,6 +35,7 @@ const VolunteerSection = () => {
         'Enhanced online presence with social media strategy and scheduling tools like Buffer',
         'Boosted follower count by 85% through consistent content and graphics'
       ],
+      technologies: ['Social Media Marketing', 'Buffer', 'Content Creation'],
       companyWebsite: 'https://umwics.ca/'
     },
     {
@@ -43,6 +46,7 @@ const VolunteerSection = () => {
         'Promoted and represented the conference to the University of Manitoba students',
         'Assisted the public relations team in recruiting delegate applicants to attend the conference'
       ],
+      technologies: ['Public Relations', 'Recruitment', 'Communication'],
       companyWebsite: 'https://www.networkofempoweredwomen.ca/'
     },
     {
@@ -53,6 +57,7 @@ const VolunteerSection = () => {
         'Guided the new students about the lifestyle in Winnipeg and cultural differences',
         'Acknowledged them about the resources available on the campus based on their needs'
       ],
+      technologies: ['Mentorship', 'Intercultural Communication', 'Event Management'],
       companyWebsite: 'https://umanitoba.ca/international'
     },
     {
@@ -63,6 +68,7 @@ const VolunteerSection = () => {
         'Scanned notes taken in class and share them to SAS students',
         'Committed to sharing notes to students in need based on their accessibility needs'
       ],
+      technologies: ['Note-taking', 'Accessibility', 'Organization'],
       companyWebsite: 'https://umanitoba.ca/student-supports/accessibility'
     }
   ];
@@ -98,13 +104,26 @@ const VolunteerSection = () => {
                   <h3 className="text-base font-arcade mb-2">
                     {exp.title}
                   </h3>
-                  <h4 className="text-lg font-body font-semibold">
+                  <h4 className="text-lg font-body font-semibold text-neon-pink">
                     {exp.company}
                   </h4>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="px-4 py-2 rounded-full font-body font-medium text-sm border border-neon-purple text-neon-purple">
+                  <div className="px-4 py-2 rounded-full font-body font-medium text-sm bg-neon-purple text-white">
                     {exp.period}
+                  </div>
+                  <div className="flex gap-2">
+                    {exp.companyWebsite && (
+                      <a
+                        href={exp.companyWebsite}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 hover:text-neon-blue transition-colors duration-300"
+                        title="Company Website"
+                      >
+                        <ExternalLink className="w-5 h-5" />
+                      </a>
+                    )}
                   </div>
                   
                 </div>
@@ -115,6 +134,17 @@ const VolunteerSection = () => {
                   <li key={i}>{item}</li>
                 ))}
               </ul>
+
+              <div className="flex flex-wrap gap-3">
+                {exp.technologies.map((tech, techIndex) => (
+                  <span
+                    key={techIndex}
+                    className="px-4 py-2 rounded-full font-body text-sm font-medium border border-neon-turquoise text-neon-turquoise"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </motion.div>
           ))}
         </div>

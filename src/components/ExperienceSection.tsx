@@ -141,12 +141,12 @@ const ExperienceSection = () => {
                   <h3 className="text-base font-arcade mb-2">
                     {exp.title}
                   </h3>
-                  <h4 className="text-lg font-body font-semibold">
+                  <h4 className="text-lg font-body font-semibold text-neon-pink">
                     {exp.company}
                   </h4>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="px-4 py-2 rounded-full font-body font-medium text-sm border border-neon-purple text-neon-purple">
+                  <div className="px-4 py-2 rounded-full font-body font-medium text-sm bg-neon-purple text-white">
                     {exp.period}
                   </div>
                   <div className="flex gap-2">
