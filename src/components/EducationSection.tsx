@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, ExternalLink } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const EducationSection = () => {
@@ -7,12 +7,11 @@ const EducationSection = () => {
     {
       degree: 'Bachelor of Science in Computer Science',
       institution: 'University of Manitoba',
-      period: 'Sept 2021 - Dec 2025 (Expected)',
+      period: 'Sept 2020 - Dec 2025 (Expected)',
       details: [
         'Relevant Coursework: Data Structures and Algorithms, Object-Oriented Programming, Database Systems, Computer Graphics, Human Computer Interaction, Artificial Intelligence',
         
       ],
-      universityWebsite: 'https://umanitoba.ca/science/computer-science',
     },
   ];
 
@@ -54,19 +53,6 @@ const EducationSection = () => {
                 <div className="flex items-center gap-4">
                   <div className="px-4 py-2 rounded-full font-body font-medium text-sm bg-neon-purple text-white">
                     {edu.period}
-                  </div>
-                  <div className="flex gap-2">
-                    {edu.universityWebsite && (
-                      <a
-                        href={edu.universityWebsite}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 hover:text-neon-blue transition-colors duration-300"
-                        title="University Website"
-                      >
-                        <ExternalLink className="w-5 h-5" />
-                      </a>
-                    )}
                   </div>
                 </div>
               </div>
