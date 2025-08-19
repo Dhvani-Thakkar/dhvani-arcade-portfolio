@@ -1,18 +1,10 @@
 
 import React from 'react';
-import { Download, Heart, Github, Linkedin, Mail } from 'lucide-react';
+import { Home, User, Code, Briefcase, Heart, Mail, Github, Linkedin, Download, GraduationCap } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
-  const handleResumeDownload = () => {
-  console.log('Resume download triggered');
-  const link = document.createElement('a');
-  link.href = '/dhvani-arcade-portfolio/Dhvani_Thakkar_Resume.pdf'; // relative to public folder
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-};
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -20,72 +12,56 @@ const Header = () => {
     }
   };
 
+  const navItems = [
+    { id: 'hero', icon: Home, label: 'Home' },
+    { id: 'skills', icon: Code, label: 'Skills' },
+    { id: 'experience', icon: Briefcase, label: 'Experience' },
+    { id: 'projects', icon: User, label: 'Projects' },
+    { id: 'volunteer', icon: Heart, label: 'Volunteer' },
+  ];
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-pink-400/30 shadow-lg shadow-pink-500/10">
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className="fixed top-0 left-0 right-0 z-50 bg-arcade-dark bg-opacity-80 backdrop-blur-sm text-arcade-text-light shadow-md border-b border-arcade-neon-green"
+    >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold text-transparent bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text flex items-center">
-          <Heart className="w-6 h-6 text-pink-400 mr-2 fill-current" />
-          &lt;DHVANI.DEV /&gt;
-        </div>
-        
-        <nav className="hidden md:flex space-x-6">
-          {[
-            { name: 'Skills', id: 'skills', emoji: '⭐' },
-            { name: 'Experience', id: 'experience', emoji: '💼' },
-            { name: 'Projects', id: 'projects', emoji: '🎨' },
-            { name: 'Volunteer', id: 'volunteer', emoji: '💕' }
-          ].map((item) => (
+        <div className="text-xl font-arcade text-neon-green">&lt;DT/&gt;</div>
+        <nav className="hidden md:flex flex-1 justify-center space-x-6">
+          {navItems.map((item) => (
             <button
-              key={item.name}
+              key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="text-pink-400 hover:text-purple-300 transition-colors duration-300 font-mono text-sm tracking-wider hover:glow flex items-center"
+              className="p-2 rounded-md hover:bg-arcade-neon-blue/20 transition-colors text-white hover:text-arcade-neon-green"
+              title={item.label}
             >
-              <span className="mr-1">{item.emoji}</span>
-              {item.name.toUpperCase()}
+              {item.label}
             </button>
           ))}
         </nav>
-
         <div className="flex items-center space-x-4">
-          {/* Contact Icons */}
-          <div className="flex items-center space-x-2">
-            <a
-              href="https://github.com/dhvani-thakkar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 bg-pink-400/20 hover:bg-pink-400/30 rounded-full transition-colors duration-300"
-              title="GitHub"
-            >
-              <Github className="w-4 h-4 text-pink-400" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/dhvanithakkar29/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 bg-purple-400/20 hover:bg-purple-400/30 rounded-full transition-colors duration-300"
-              title="LinkedIn"
-            >
-              <Linkedin className="w-4 h-4 text-purple-400" />
-            </a>
-            <a
-              href="mailto:dhvanithakkar2003@gmail.com"
-              className="p-2 bg-pink-400/20 hover:bg-pink-400/30 rounded-full transition-colors duration-300"
-              title="Email"
-            >
-              <Mail className="w-4 h-4 text-pink-400" />
-            </a>
-          </div>
-
+          <a href="https://github.com/dhvani-thakkar" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md hover:bg-arcade-neon-blue/20 transition-colors text-neon-turquoise hover:text-neon-turquoise">
+            <Github className="w-5 h-5" />
+          </a>
+          <a href="https://www.linkedin.com/in/dhvanithakkar29/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-md hover:bg-arcade-neon-blue/20 transition-colors text-neon-turquoise hover:text-neon-turquoise">
+            <Linkedin className="w-5 h-5" />
+          </a>
+          <a href="mailto:dhvanithakkar2003@gmail.com" className="p-2 rounded-md hover:bg-arcade-neon-blue/20 transition-colors text-neon-turquoise hover:text-neon-turquoise">
+            <Mail className="w-5 h-5" />
+          </a>
           <Button
-            onClick={handleResumeDownload}
-            className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-mono text-sm tracking-wider border-2 border-pink-400 hover:border-purple-300 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/25 rounded-2xl"
+            onClick={() => window.open('/Dhvani_Thakkar_Resume.pdf', '_blank')}
+            variant="outline"
+            className="bg-neon-green text-dark-arcade hover:bg-neon-pink border-neon-green shadow-neon-green"
           >
             <Download className="w-4 h-4 mr-2" />
-            RESUME 
+            Resume
           </Button>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

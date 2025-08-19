@@ -1,52 +1,47 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 240 50% 10%; /* dark-arcade */
+    --foreground: 0 0% 100%; /* white */
 
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 100%;
+    --card: 240 50% 10%;
+    --card-foreground: 0 0% 100%; /* white */
 
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 240 50% 10%;
+    --popover-foreground: 0 0% 100%; /* white */
 
-    --primary: 320 100% 70%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 110 100% 54%; /* neon-green */
+    --primary-foreground: 240 50% 10%;
 
-    --secondary: 280 100% 70%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 329 100% 54%; /* neon-pink */
+    --secondary-foreground: 240 50% 10%;
 
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 240 50% 10%;
+    --muted-foreground: 0 0% 100%; /* white */
 
-    --accent: 320 100% 70%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 277 100% 50%; /* neon-purple */
+    --accent-foreground: 240 50% 10%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%; /* Keep red for destructive actions */
+    --destructive-foreground: 0 0% 100%; /* white */
 
-    --border: 320 50% 30%;
-    --input: 320 50% 15%;
-    --ring: 320 100% 70%;
+    --border: 110 100% 54%; /* neon-green */
+    --input: 180 100% 50%; /* neon-blue */
+    --ring: 110 100% 54%; /* neon-green */
 
-    --radius: 1rem;
+    --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 320 100% 70%;
-    --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 0 0% 10%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 320 50% 15%;
-    --sidebar-ring: 320 100% 70%;
+    --sidebar-background: 240 50% 10%;
+    --sidebar-foreground: 0 0% 100%; /* white */
+    --sidebar-primary: 110 100% 54%;
+    --sidebar-primary-foreground: 240 50% 10%;
+    --sidebar-accent: 329 100% 54%;
+    --sidebar-accent-foreground: 240 50% 10%;
+    --sidebar-border: 110 100% 54%;
+    --sidebar-ring: 110 100% 54%;
   }
 }
 
@@ -56,117 +51,10 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Poppins', 'JetBrains Mono', 'Courier New', monospace;
-  }
-}
 
-/* Custom girly arcade-style animations and effects */
-@layer utilities {
-  .glow {
-    text-shadow: 0 0 15px currentColor;
-  }
-  
-  .arcade-border {
-    border-image: linear-gradient(45deg, #ff69b4, #ff1493, #da70d6) 1;
   }
 
-  .pixel-border {
-    image-rendering: pixelated;
-    border-style: solid;
-    border-image: url("data:image/svg+xml,%3csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m0,0 l0,8 l8,0 l0,-8 z' fill='%23ff69b4'/%3e%3c/svg%3e") 8;
+  h1, h2, h3, h4, h5, h6 {
+
   }
-}
-
-@keyframes grid-move {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(30px, 30px); }
-}
-
-@keyframes neon-pulse {
-  0%, 100% { 
-    box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
-  }
-  50% { 
-    box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4;
-  }
-}
-
-@keyframes arcade-glow {
-  0%, 100% {
-    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 40px #ff69b4;
-  }
-  50% {
-    text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 20px #ff69b4;
-  }
-}
-
-@keyframes sparkle {
-  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
-  50% { opacity: 1; transform: scale(1) rotate(180deg); }
-}
-
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #000;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #ff69b4, #da70d6);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #da70d6, #ff69b4);
-}
-
-/* Selection styling */
-::selection {
-  background: rgba(255, 105, 180, 0.3);
-  color: white;
-}
-
-/* Input focus effects */
-input:focus, textarea:focus {
-  box-shadow: 0 0 0 2px rgba(255, 105, 180, 0.3);
-}
-
-/* CRT screen effect */
-.crt-screen {
-  position: relative;
-}
-
-.crt-screen::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(255, 105, 180, 0.03) 2px,
-    rgba(255, 105, 180, 0.03) 4px
-  );
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Sparkle effects */
-.sparkle {
-  animation: sparkle 2s infinite;
-}
-
-.sparkle:nth-child(2n) {
-  animation-delay: 0.5s;
-}
-
-.sparkle:nth-child(3n) {
-  animation-delay: 1s;
 }
