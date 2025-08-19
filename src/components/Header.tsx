@@ -70,7 +70,7 @@ const Header = ({ navItems }: HeaderProps) => {
             <Mail className="w-5 h-5" />
           </a>
           <Button
-            onClick={() => window.open('/Dhvani_Thakkar_Resume.pdf', '_blank')}
+            onClick={() => window.open(`${import.meta.env.BASE_URL}Dhvani_Thakkar_Resume.pdf`, '_blank')}
             variant="outline"
             className="bg-neon-green text-dark-arcade hover:bg-neon-pink"
           >
