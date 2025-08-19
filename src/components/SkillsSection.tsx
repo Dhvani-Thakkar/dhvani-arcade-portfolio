@@ -87,7 +87,7 @@ const SkillsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 * categoryIndex, ease: 'easeOut' }}
-                className="bg-arcade-dark rounded-lg p-6 border border-neon-pink shadow-neon-white hover:shadow-neon-purple"
+                className="bg-arcade-dark rounded-lg p-6 border border-neon-pink shadow-neon-a hover:shadow-neon-purple"
               >
                 <div className="flex items-center mb-4">
                   <Icon className="w-6 h-6 mr-3" />
@@ -105,7 +105,7 @@ const SkillsSection = () => {
                       transition={{ duration: 0.5, delay: 0.1 * index, ease: 'easeOut' }}
                       className="flex items-center rounded-md p-3 border"
                     >
-                      <span className="font-body font-medium text-sm text-white">
+                      <span className="font-body font-medium text-sm text-neon-turquoise">
                         {skill.name}
                       </span>
                     </motion.div>
