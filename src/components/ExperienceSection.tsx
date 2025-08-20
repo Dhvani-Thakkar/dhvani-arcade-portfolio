@@ -13,10 +13,11 @@ const ExperienceSection = () => {
         company: 'Governement of Manitoba',
         period: 'May 2024 - Present',
         description: [
-          'Built digital tools replacing paper-based reports, cutting reporting time by 60%',
-          'Analyzed 1,000+ business records for pandemic response tool'
+          'Build and maintain 5 internal digital tools to replace paper-based emergency reporting methods, modernize workflows, improve front-end functionality and reduce reporting time by 60%.',
+          'Perform data extraction and analysis on 1000+ business records from all over Manitoba for a continuity planning tool, providing insights to support pandemic response strategy.',
+          'Create and maintain technical documentation for system upgrades, access controls, and infrastructure workflows, allowing smooth knowledge transfer between a team of 8.',
         ],
-        technologies: ['React', 'Node.js', 'TypeScript', 'AzureDevOps', 'AWS'],
+        technologies: ['ReactJS', 'Node.js', 'TypeScript', 'AzureDevOps', 'AWS', 'Docker'],
         color: 'from-neon-blue to-neon-pink',
         companyWebsite: 'https://gov.mb.ca/emo/index.html',
       },
@@ -25,10 +26,11 @@ const ExperienceSection = () => {
         company: 'Antec Controls - Price Industries',
         period: 'May 2023 - Sept 2023',
         description: [
-          'Executed 30+ product tests, detecting critical issues early',
-          'Reduced prototype development time by 30%'
+          'Executed and debugged 30+ integration tests across hardware and software, ensuring system stability and adherence to SDLC and QA best practices.',
+          'Collaborated with engineering team to resolve critical integration challenges, leading to a 30% reduction in prototype development time and accelerating the project cycle.',
+          'Documented 10+ test results in detail to guide product refinements, enabling data-driven improvements for enhanced reliability.'
         ],
-        technologies: ['C++','Microsoft 365'],
+        technologies: ['C++','Microsoft 365','AutoCAD'],
         color: 'from-neon-blue to-neon-pink',
         companyWebsite: 'https://anteccontrols.com/',
       }
