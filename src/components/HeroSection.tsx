@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Heart } from 'lucide-react';
 
 const HeroSection = () => {
   const [displayText, setDisplayText] = useState('');
@@ -41,14 +42,25 @@ const HeroSection = () => {
   }, [displayText, currentIndex, isDeleting, careers]);
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-arcade-dark text-arcade-text-light p-6 pt-24">
-      <div className="text-center max-w-4xl mx-auto">
+    <section id="hero" className="min-h-screen flex flex-col items-center justify-center bg-arcade-dark text-arcade-text-light p-6 pt-24">
+      <div className="w-full flex justify-between items-center px-4 mb-8">
+        <div className="flex items-center space-x-2">
+          {Array.from({ length: 5 }).map((_, index) => (
+            <Heart key={index} className="w-8 h-8 text-red-500 fill-current" />
+          ))}
+        </div>
+        <div className="text-neon-blue text-2xl font-arcade flex flex-col items-center">
+          <span>HIGH SCORE</span>
+          <span>99999</span>
+        </div>
+      </div>
+      <div className="text-center max-w-4xl mx-auto" style={{ marginTop: '-6rem' }}>
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <img src={`${import.meta.env.BASE_URL}profile.jpg`} alt="Dhvani Thakkar" className="w-48 h-48 mx-auto rounded-full mb-8 border-4 border-arcade-neon-green shadow-neon-green" />
+          <img src={`${import.meta.env.BASE_URL}profile.png`} alt="Dhvani Thakkar" className="w-48 h-48 mx-auto rounded-full mb-8 border-4 border-arcade-neon-green shadow-neon-green" />
           <h1 className="text-7xl font-arcade mb-8 text-white">
             DHVANI THAKKAR
           </h1>
@@ -60,7 +72,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
         >
           <div className="text-xl md:text-2xl font-body mb-8 h-16 flex items-center justify-center text-neon-turquoise">
-            <span>{displayText}</span>
+            <span className="font-mono">{displayText}</span>
             <span className="animate-ping ml-1 text-neon-turquoise">|</span>
           </div>
         </motion.div>
@@ -73,7 +85,7 @@ const HeroSection = () => {
           <div className="max-w-2xl mx-auto">
             <p className="text-xl font-body leading-relaxed text-white">
               Currently seeking for full-time opportunities to apply my skills in
-              <span className="text-neon-green font-bold"> software engineering</span> and
+              <span className="text-neon-pink font-bold"> software engineering</span> and
               contribute to innovative projects that make a difference!
             </p>
           </div>

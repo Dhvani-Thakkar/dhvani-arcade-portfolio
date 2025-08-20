@@ -9,8 +9,12 @@ const EducationSection = () => {
       institution: 'University of Manitoba',
       period: 'Sept 2020 - Dec 2025 (Expected)',
       details: [
-        'Relevant Coursework: Data Structures and Algorithms, Object-Oriented Programming, Database Systems, Computer Graphics, Human Computer Interaction, Artificial Intelligence',
-        
+        'Data Structures and Algorithms',
+        'Object-Oriented Programming',
+        'Database Systems',
+        'Computer Graphics',
+        'Human Computer Interaction',
+        'Artificial Intelligence',
       ],
     },
   ];
@@ -57,11 +61,15 @@ const EducationSection = () => {
                 </div>
               </div>
 
-              <ul className="list-pixel-arrow list-inside font-body text-lg leading-relaxed mb-6 text-white">
+              <h5 className="text-lg font-body text-neon-turquoise mb-2">• Minor: Statistics</h5>
+              <h5 className="text-lg font-body text-neon-turquoise mb-2">• Relevant Coursework</h5>
+              <div className="flex flex-wrap gap-2 mt-4">
                 {edu.details.map((item, i) => (
-                  <li key={i}>{item}</li>
+                  <div key={i} className="bg-gray-800 text-white px-3 py-1 rounded-md text-sm font-body border border-neon-blue">
+                    {item}
+                  </div>
                 ))}
-              </ul>
+              </div>
             </motion.div>
           ))}
         </div>
