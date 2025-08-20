@@ -129,7 +129,7 @@ const VolunteerSection = () => {
                 </div>
               </div>
 
-              <ul className="list-disc list-inside font-body text-lg leading-relaxed mb-6 text-white">
+              <ul className="list-pixel-arrow list-inside font-body text-lg leading-relaxed mb-6 text-white">
                 {exp.description.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
