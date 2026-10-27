@@ -9,9 +9,22 @@ const ExperienceSection = () => {
   const experiences = {
     professional: [
       {
+        title: 'Sales Software Analyst',
+        company: 'Price Industries',
+        period: 'Nov 2024 - Present',
+        description: [
+          'Streamline successful adoption of sales technology solutions, including Price Select, Salesforce CRM, and web platforms, by troubleshooting complex user issues, providing ongoing technical support, and delivering training to sales reps.',
+          'Leverage adoption metrics, user feedback, and sales data to develop reports and insights that informed decision-making, identified improvement opportunities, and enhanced system usability, data quality, and operational efficiency.',
+          'Compile and analyze 200+ rep feedback items, collaborating with business units, development, and QA teams to incorporate insights into the Price Select platform, improving usability, strengthening data quality, and driving efficient sales processes.',
+        ],
+        technologies: ['PowerBI', 'MongoDB', 'AzureDevOps'],
+        color: 'from-neon-blue to-neon-pink',
+        companyWebsite: 'https://priceindustries.com/',
+      },
+      {
         title: 'Junior Systems Analyst',
         company: 'Governement of Manitoba',
-        period: 'May 2024 - Present',
+        period: 'May 2024 - Nov 2024',
         description: [
           'Build and maintain 5 internal digital tools to replace paper-based emergency reporting methods, modernize workflows, improve front-end functionality and reduce reporting time by 60%.',
           'Perform data extraction and analysis on 1000+ business records from all over Manitoba for a continuity planning tool, providing insights to support pandemic response strategy.',

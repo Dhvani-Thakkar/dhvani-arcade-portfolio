@@ -7,7 +7,7 @@ const EducationSection = () => {
     {
       degree: 'Bachelor of Science in Computer Science',
       institution: 'University of Manitoba',
-      period: 'Sept 2020 - Dec 2025 (Expected)',
+      period: 'Jan 2020 - Feb 2026',
       details: [
         'Data Structures and Algorithms',
         'Object-Oriented Programming',

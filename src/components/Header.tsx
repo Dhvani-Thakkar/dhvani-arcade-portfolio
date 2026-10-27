@@ -69,14 +69,6 @@ const Header = ({ navItems }: HeaderProps) => {
           <a href="mailto:dhvanithakkar2003@gmail.com" className="p-2 rounded-md hover:bg-arcade-neon-blue/20 transition-colors text-neon-turquoise hover:text-neon-turquoise">
             <Mail className="w-5 h-5" />
           </a>
-          <Button
-            onClick={() => window.open(`${import.meta.env.BASE_URL}Dhvani_Thakkar_Resume.pdf`, '_blank')}
-            variant="outline"
-            className="bg-neon-green text-dark-arcade hover:bg-neon-pink"
-          >
-            <Download className="w-4 h-4 mr-2" />
-            Resume
-          </Button>
         </div>
       </div>
     </motion.header>

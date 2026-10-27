@@ -9,13 +9,12 @@ const HeroSection = () => {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const careers = [
-    'Computer Science Student',
+    'Sales Software Analyst',
     'Software Engineer',
     'Full-Stack Developer',
     'Frontend Specialist',
     'Data Analyst',
     'Tech Enthusiast',
-    'Data Engineer',
   ];
 
   useEffect(() => {
@@ -84,9 +83,9 @@ const HeroSection = () => {
         >
           <div className="max-w-2xl mx-auto">
             <p className="text-xl font-body leading-relaxed text-white">
-              Currently seeking for full-time opportunities to apply my skills in
-              <span className="text-neon-pink font-bold"> software engineering</span> and
-              contribute to innovative projects that make a difference!
+              Computer Science and Statistics Graduate from University of Manitoba. Currently working as a 
+              <span className="text-neon-pink font-bold"> Sales Software Analayst </span> 
+              at Price Industries!
             </p>
           </div>
         </motion.div>
